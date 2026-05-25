@@ -1,0 +1,4 @@
+ Phân tích: 3 lý do tuyệt đối không dùng System.out.println() trên Production
+Ảnh hưởng hiệu năng: Hàm này đồng bộ (synchronized). Nó gây nghẽn luồng (blocking). Hệ thống sẽ bị chậm khi xử lý lượng truy cập lớn.
+Thiếu thông tin ngữ cảnh: Không tự động in thời gian (timestamp). Không có cấp độ log (Log Level). Không hiển thị tên thread xử lý lỗi.
+Khó quản lý log: Chỉ in ra console. Không tự động chia nhỏ file theo ngày (rotation). Không thể đẩy log lên các hệ thống quản lý tập trung như ELK, Splunk.
